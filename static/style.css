@@ -22,6 +22,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'TT Interfaces';
+    src: url('fonts/tt_interfaces/TTInterfaces-Bold.eot');
+    src: local('fonts/tt_interfaces/TT Interfaces Bold'), local('TTInterfaces-Bold'),
+        url('fonts/tt_interfaces/TTInterfaces-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/tt_interfaces/TTInterfaces-Bold.woff2') format('woff2'),
+        url('fonts/tt_interfaces/TTInterfaces-Bold.woff') format('woff'),
+        url('fonts/tt_interfaces/TTInterfaces-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 button, a {
     cursor: pointer; 
 }
@@ -149,4 +161,47 @@ body {
     align-self: center;
     padding-bottom: 9px;
     padding-top: 10px;
+}
+
+.error-label {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 64px;
+}
+
+.error-label img {
+    padding: 0 2px
+}
+
+.error-message {
+    font-family: 'TT Interfaces';
+    text-align: center;
+    padding-top: 42px;
+}
+
+.error-message-label {
+    font-weight: 500;
+    font-size: 36px;
+    color: #1B1B1B;
+}
+
+.error-message-text {
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+}
+
+.error-message .button-to-main-page {
+    width: 248px;
+    height: 52px;
+    background-image: url('images/button-background.png');
+    background-color: #E07153;
+    font-family: 'TT Interfaces';
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 1px solid #C95C3F;
+    border-radius: 2px;
 }
