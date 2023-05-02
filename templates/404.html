@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+{% block title %}Flasky - Page Not Found{% endblock %} 
+
+{% block page_content %} 
+<div class="error-label">
+    <img src="/static/images/4-img.png">
+    <img src="/static/images/error-img.png">
+    <img src="/static/images/4-img.png">
+</div>
+<div class="error-message">
+    <div class="error-message-label">Страница не найдена</div>
+    <div class="error-message-text">
+        Извините, но страницы, которую Вы пытаетесь найти 
+        - не существует.<br>
+        Предлагаем Вам перейти на Главную страницу
+    </div>
+    <button class="button-to-main-page">На главную</button>
+</div>
+{% endblock %} 
