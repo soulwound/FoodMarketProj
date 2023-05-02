@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1208px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 89px;
+    justify-content: space-between;
+}
+
+.header-link {
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.header-logo {
+    width: 134px;
+    height: 156px;
+}
+
+.test {
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+}
+
+.header-phone-number {
+    text-align: right;
+    padding-top: 24px;
+    padding-bottom: 27px;
+}
+
+.header-buttons {
+    display: flex;
+}
+.shopping-cart {
+    width: 134px;
+    height: 48px;
+    align-self: center;
+    background-color: #F5F5F5;
+    border: none;
+    margin-right: 24px;
+}
+
+.profile-button {
+    width: 48px;
+    height: 48px;
+    align-self: center;
+    background-color: #F5F5F5;
+    border: none;
+}
