@@ -34,6 +34,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'TT Interfaces';
+    src: url('fonts/tt_interfaces/TTInterfaces-Light.eot');
+    src: local('fonts/tt_interfaces/TT Interfaces Light'), local('TTInterfaces-Light'),
+        url('fonts/tt_interfaces/TTInterfaces-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/tt_interfaces/TTInterfaces-Light.woff2') format('woff2'),
+        url('fonts/tt_interfaces/TTInterfaces-Light.woff') format('woff'),
+        url('fonts/tt_interfaces/TTInterfaces-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 button, a {
     cursor: pointer; 
 }
@@ -191,6 +203,7 @@ body {
     font-size: 20px;
     padding-top: 8px;
     padding-bottom: 24px;
+    line-height: 30px;
 }
 
 .error-message .button-to-main-page {
@@ -204,4 +217,110 @@ body {
     color: #FFFFFF;
     border: 1px solid #C95C3F;
     border-radius: 2px;
+}
+
+.phantom-footer {
+    height: 143px;
+}
+
+.footer {
+    height: 143px;
+    background-color: #1B1B1B;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+
+}
+
+.footer-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1254px;
+    display: flex;
+}
+
+.footer-logo {
+    padding-left: 15px;
+    margin-top: -39px;
+    margin-bottom: 39px;
+    height: 132px;
+}
+
+.footer-social-menu {
+    padding-top: 35px;
+    padding-left: 51px;
+}
+
+.footer-social-links {
+    font-family: 'TT Interfaces';
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding-bottom: 15px;
+}
+
+.footer-social-links .mid {
+    padding: 0 40px;
+}
+
+.footer-social-icons a {
+    padding: 16px 0px;
+}
+
+.footer-categories-menu {
+    padding-left: 89px;
+    padding-top: 35px;
+    padding-bottom: 54px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 54px;
+    justify-content: space-between;
+    width: 456px;
+}
+
+.footer-categories-menu a {
+    font-family: 'TT Interfaces';
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.footer-categories-menu .top {
+    padding-bottom: 20px;
+}
+
+.footer-contacts {
+    padding-left: 10px;
+    padding-top: 32px;
+}
+
+.footer-contacts .phone-number {
+    font-family: 'TT Interfaces';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30.36px;
+    padding-bottom: 7px;
+    color: #FFFFFF;
+}
+
+.footer-contacts .time {
+    font-family: 'TT Interfaces';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.footer-contacts .rights {
+    font-family: 'TT Interfaces';
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    color: #FFFFFF;
+    padding-left: 26px;
 }

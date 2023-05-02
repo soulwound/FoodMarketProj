@@ -76,3 +76,42 @@
 {% block content %} 
     {% block page_content %}{% endblock %} 
 {% endblock %}
+
+<div class="phantom-footer"></div>
+
+{% block footer %} 
+<div class="footer">
+    <div class="footer-wrapper">
+        <img class="footer-logo" src="/static/images/footer-logo.png">
+        <div class="footer-social-menu">
+            <div class="footer-social-links">
+                <a>О нас</a>
+                <a class="mid">Доставка и оплата</a>
+                <a>Контакты</a>
+            </div>
+            <div class="footer-social-icons">
+                <a><img src="/static/images/facebook-icon.png"></a>
+                <a><img src="/static/images/instagram-icon.png"></a>
+                <a><img src="/static/images/vk-icon.png"></a>
+            </div>
+        </div>
+        <div class="footer-categories-menu">
+            <a class="top">Пицца</a>
+            <a>Супы</a>
+            <a class="top">Суши</a>
+            <a>Салаты</a>
+            <a class="top">Роллы</a>
+            <a>Десерты</a>
+            <a class="top">Сеты</a>
+            <a>Напитки</a>
+            <a class="top">Wok</a>
+            <a>Акции</a>
+        </div>
+        <div class="footer-contacts">
+            <div class="phone-number">+7 (495) 617-14-24</div>
+            <div class="time">c 10:00 до 23:00</div>
+            <div class="rights">© Рикша. Все права защищены.</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
