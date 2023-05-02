@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'TT Interfaces';
+    src: url('fonts/tt_interfaces/TTInterfaces-Regular.eot');
+    src: local('fonts/tt_interfaces/TT Interfaces Regular'), local('TTInterfaces-Regular'),
+        url('fonts/tt_interfaces/TTInterfaces-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/tt_interfaces/TTInterfaces-Regular.woff2') format('woff2'),
+        url('fonts/tt_interfaces/TTInterfaces-Regular.woff') format('woff'),
+        url('fonts/tt_interfaces/TTInterfaces-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Interfaces';
+    src: url('fonts/tt_interfaces/TTInterfaces-Medium.eot');
+    src: local('fonts/tt_interfaces/TT Interfaces Medium'), local('TTInterfaces-Medium'),
+        url('fonts/tt_interfaces/TTInterfaces-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/tt_interfaces/TTInterfaces-Medium.woff2') format('woff2'),
+        url('fonts/tt_interfaces/TTInterfaces-Medium.woff') format('woff'),
+        url('fonts/tt_interfaces/TTInterfaces-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+button, a {
+    cursor: pointer; 
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -15,11 +43,16 @@ body {
 .header-link {
     padding-top: 36px;
     padding-bottom: 36px;
+    font-family: 'TT Interfaces';
+    text-decoration: none;
+    color: #1B1B1B;
+    font-size: 14px;
 }
 
 .header-logo {
     width: 134px;
     height: 156px;
+    padding-top: 8px;
 }
 
 .test {
@@ -32,11 +65,22 @@ body {
     text-align: right;
     padding-top: 24px;
     padding-bottom: 27px;
+    font-family: 'TT Interfaces';
+    font-weight: 500;
+    font-size: 16px;
+    color: #1B1B1B;
+}
+
+.header-phone-number div {
+    font-size: 12px;
+    color: #B7B7B7;
+    padding-top: 3px;
 }
 
 .header-buttons {
     display: flex;
 }
+
 .shopping-cart {
     width: 134px;
     height: 48px;
@@ -44,6 +88,22 @@ body {
     background-color: #F5F5F5;
     border: none;
     margin-right: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'TT Interfaces';
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.shopping-cart *{
+    align-self: center;
+}
+
+.shopping-cart .white-line {
+    width: 1px;
+    height: 24px;
+    background-color: #FFFFFF;
+    align-self: center;
 }
 
 .profile-button {
@@ -52,4 +112,41 @@ body {
     align-self: center;
     background-color: #F5F5F5;
     border: none;
+}
+
+.navbar-categories {
+    height: 83px;
+    background-color: #F5F5F5;
+}
+
+.navbar-categories .phantom-logo {
+    width: 134px;
+    color: #F5F5F5;
+}
+
+.navbar-categories-wrapper {
+    max-width: 1208px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-categories-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'TT Interfaces';
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #1B1B1B;
+
+}
+
+.navbar-categories-link img {
+    align-self: center;
+    padding-bottom: 9px;
+    padding-top: 10px;
 }
