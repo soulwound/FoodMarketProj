@@ -6,6 +6,10 @@
     display: flex;
 }
 
+.menu-filter {
+    display: flex;
+}
+
 .filter .option {
     display: flex;
     align-items: center;
@@ -22,7 +26,19 @@
     line-height: 17px;
 }
 
+.order-header {
+    font-family: 'TT Interfaces';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color:#B7B7B7;
+}
+
 .filter .option img {
     padding-right: 8px;
+}
+
+.menu-item-image {
+
 }
 

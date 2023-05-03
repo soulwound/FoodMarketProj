@@ -14,58 +14,77 @@
         <a class="current-category" href="/">Суши</a>
     </div>
     <div class="menu-header">Суши</div>
-    <div class="menu-filter">
-        <div class="filter by-ingridient">
-            <button class="filter option">
-                <img src="/static/images/salmon-icon.png">
-                <span>Лосось</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/tuna-icon.png">
-                <span>Тунец</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/eel-icon.png">
-                <span>Угорь</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/shrimp-icon.png">
-                <span>Креветка</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/crab-icon.png">
-                <span>Краб</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/mussels-icon.png">
-                <span>Мидии</span>
-            </button>
+        <div class="menu-filter">
+            <div class="filters">
+            <div class="filter by-ingridient">
+                <button class="filter option">
+                    <img src="/static/images/salmon-icon.png">
+                    <span>Лосось</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/tuna-icon.png">
+                    <span>Тунец</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/eel-icon.png">
+                    <span>Угорь</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/shrimp-icon.png">
+                    <span>Креветка</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/crab-icon.png">
+                    <span>Краб</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/mussels-icon.png">
+                    <span>Мидии</span>
+                </button>
+            </div>
+            <div class="filter by-category">
+                <button class="filter option">
+                    <img src="/static/images/spicy-icon.png">
+                    <span>Острое</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/grilled-roll-icon.png">
+                    <span>Запеченный ролл</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/vegan-icon.png">
+                    <span>Vegan</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/top-icon.png">
+                    <span>ТОП-позиции</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/new-icon.png">
+                    <span>Новинки</span>
+                </button>
+                <button class="filter option">
+                    <img src="/static/images/sales-icon.png">
+                    <span>Скидки</span>
+                </button>
+            </div>
         </div>
-        <div class="filter by-category">
-            <button class="filter option">
-                <img src="/static/images/spicy-icon.png">
-                <span>Острое</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/grilled-roll-icon.png">
-                <span>Запеченный ролл</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/vegan-icon.png">
-                <span>Vegan</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/top-icon.png">
-                <span>ТОП-позиции</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/new-icon.png">
-                <span>Новинки</span>
-            </button>
-            <button class="filter option">
-                <img src="/static/images/sales-icon.png">
-                <span>Скидки</span>
-            </button></div>
+        <div class="order">
+            <div class="order-header">Сортировка</div>
+            <select name="select">
+                <option value="default" selected>По умолчанию</option>
+                <option value="by-price-going-low">По убыванию цены</option>
+                <option value="by-price-going-up">По возрастанию цены</option>
+            </select>
+        </div>
+    </div>
+    <div class="menu-items">
+        <div class="menu-item">
+            <div class="menu-item-image">
+                <img src="/static/images/products/sushi/roll-fila.png">
+            </div>
+            <div class="menu-item-info"></div>
+        </div>
     </div>
 </div>
 {% endblock %} 
