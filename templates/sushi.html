@@ -1,0 +1,71 @@
+{% extends "base.html" %} 
+{% block head %}
+<title>Рикша-Суши</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='sushi-style.css', v='1') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+{% endblock %}
+{% block page_content %} 
+<div class="catalog-wrapper">
+    <div class="menu-directory">
+        <a href="{{ url_for('index') }}">Главная</a>
+        <div class="separator">//</div>
+        <a class="current-category" href="/">Суши</a>
+    </div>
+    <div class="menu-header">Суши</div>
+    <div class="menu-filter">
+        <div class="filter by-ingridient">
+            <button class="filter option">
+                <img src="/static/images/salmon-icon.png">
+                <span>Лосось</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/tuna-icon.png">
+                <span>Тунец</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/eel-icon.png">
+                <span>Угорь</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/shrimp-icon.png">
+                <span>Креветка</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/crab-icon.png">
+                <span>Краб</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/mussels-icon.png">
+                <span>Мидии</span>
+            </button>
+        </div>
+        <div class="filter by-category">
+            <button class="filter option">
+                <img src="/static/images/spicy-icon.png">
+                <span>Острое</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/grilled-roll-icon.png">
+                <span>Запеченный ролл</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/vegan-icon.png">
+                <span>Vegan</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/top-icon.png">
+                <span>ТОП-позиции</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/new-icon.png">
+                <span>Новинки</span>
+            </button>
+            <button class="filter option">
+                <img src="/static/images/sales-icon.png">
+                <span>Скидки</span>
+            </button></div>
+    </div>
+</div>
+{% endblock %} 

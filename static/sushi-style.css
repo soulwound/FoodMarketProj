@@ -1,0 +1,28 @@
+.by-ingridient {
+    display: flex;
+}
+
+.by-category {
+    display: flex;
+}
+
+.filter .option {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0px 20px;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    background-color: rgba(28,28,28,0);
+    margin-right: 4px;
+    margin-bottom: 4px;
+    font-family: 'TT Interfaces';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.filter .option img {
+    padding-right: 8px;
+}
+

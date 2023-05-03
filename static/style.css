@@ -12,6 +12,18 @@
 
 @font-face {
     font-family: 'TT Interfaces';
+    src: url('fonts/tt_interfaces/TTInterfaces-SemiBold.eot');
+    src: local('fonts/tt_interfaces/TT Interfaces SemiBold'), local('TTInterfaces-SemiBold'),
+        url('fonts/tt_interfaces/TTInterfaces-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/tt_interfaces/TTInterfaces-SemiBold.woff2') format('woff2'),
+        url('fonts/tt_interfaces/TTInterfaces-SemiBold.woff') format('woff'),
+        url('fonts/tt_interfaces/TTInterfaces-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Interfaces';
     src: url('fonts/tt_interfaces/TTInterfaces-Medium.eot');
     src: local('fonts/tt_interfaces/TT Interfaces Medium'), local('TTInterfaces-Medium'),
         url('fonts/tt_interfaces/TTInterfaces-Medium.eot?#iefix') format('embedded-opentype'),
@@ -48,6 +60,7 @@
 
 button, a {
     cursor: pointer; 
+    text-decoration: none;
 }
 
 body {
@@ -323,4 +336,47 @@ body {
     line-height: 15px;
     color: #FFFFFF;
     padding-left: 26px;
+}
+
+.catalog-wrapper {
+    max-width: 1226px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-directory {
+    padding-top: 48px;
+    padding-left: 1px;
+    padding-bottom: 25px;
+    display: flex;
+    font-family: 'TT Interfaces';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1B1B1B;
+    text-decoration: none;
+}
+
+.menu-directory a {
+    color: #1B1B1B;
+    text-decoration: none;
+}
+
+.menu-directory .separator {
+    padding: 0px 8px;
+    color: #1B1B1B;
+    text-decoration: none;
+}
+
+.menu-directory .current-category {
+    font-weight: 600;
+}
+
+.menu-header {
+    font-family: 'TT Interfaces';
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+    padding-left: 1px;
+    padding-bottom: 21px;
 }

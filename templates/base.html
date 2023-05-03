@@ -1,5 +1,8 @@
 {% block head %}
+<title>Рикша</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='1') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 {% endblock %}
 
 {% block navbar %} 
@@ -33,7 +36,7 @@
             <img src="/static/images/pizza-icon.png">
             <div>Пицца</div>
         </a>
-        <a class="navbar-categories-link" href="/">
+        <a class="navbar-categories-link" href="{{ url_for('sushi') }}">
             <img src="/static/images/sushi-icon.png">
             <div>Суши</div>
         </a>
@@ -98,7 +101,7 @@
         <div class="footer-categories-menu">
             <a class="top">Пицца</a>
             <a>Супы</a>
-            <a class="top">Суши</a>
+            <a class="top" href="{{ url_for('sushi') }}">Суши</a>
             <a>Салаты</a>
             <a class="top">Роллы</a>
             <a>Десерты</a>
