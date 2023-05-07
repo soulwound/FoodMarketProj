@@ -54,7 +54,96 @@
     padding-right: 8px;
 }
 
+.menu-items {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .menu-item-image {
 
 }
 
+.menu-item {
+    padding-bottom: 24px;
+}
+
+.menu-item-info {
+    height: 223px;
+    padding-left: 24px;
+}
+
+.weight-calories {
+    display: flex;
+    align-items: center;
+    font-family: 'TT Interfaces';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B7B7B7;
+    padding-bottom: 4px;
+}
+
+.weight-calories .separator {
+    padding: 0px 8px;
+}
+
+.menu-item-info-title {
+    font-family: TT Interfaces;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    padding-bottom: 4px;
+    color: #1B1B1B;
+}
+
+.menu-item-info-ingridients {
+    font-family: TT Interfaces;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #1B1B1B;
+    height: 51px;
+    padding-bottom: 12px;
+}
+
+.menu-item-info-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 368px;
+    padding-bottom: 24px;
+}
+
+.menu-item-info-price .price{
+    font-family: TT Interfaces;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-decoration-line: line-through;
+    color: #B7B7B7;
+}
+
+.menu-item-info-price .new-price {
+    font-family: TT Interfaces;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #1B1B1B;
+}
+
+.menu-item-info-price .buy-button {
+    margin-left: -24px;
+    width: 180px;
+    height: 44px;
+    background-image: url('images/products/buy-btn-bg.png');
+    background-color: #E07153;
+    border: 1px solid #C95C3F;
+    border-radius: 2px;
+    font-family: TT Interfaces;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #FFFFFF;
+}

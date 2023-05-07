@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='1') }}">
 <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+<script src="../static/script.js"></script>
 {% endblock %}
 
 {% block navbar %} 
@@ -12,21 +13,25 @@
     <a class="header-link" href="/">Доставка и оплата</a>
     <a class="header-link" href="/">Контакты</a>
     <a class="header-link" href="/">Бонусы</a>
-    <a class="header-link" href="/">Вакансии</a>
+    <a class="header-link" href="/">Вакансии</a>    
     <span class="header-phone-number">
         <img src="/static/images/phone-icon.png">
         <span>+7 (495) 617-14-24</span>
         <div>c 10:00 до 23:00</div>
     </span>
     <div class="header-buttons">
-        <button class="shopping-cart">
-            <span>0 ₽</span>
-            <div class="white-line"></div>
-            <img src="/static/images/cart.png">
-        </button>
+            <button class="shopping-cart" id="button-js" onclick="show()">
+                <span>0 ₽</span>
+                <div class="white-line"></div>
+                <img src="/static/images/cart.png">
+            </button>
         <button class="profile-button">
             <img src="/static/images/profile-icon.png">
         </button>
+    </div>
+    <div class="shopping-cart-showed" id="cart">
+        <img class="if-cart-is-empty" src="/static/images/if-cart-is-empty.png">
+        <div class="empty-cart-alert">Ваша корзина пуста</div>
     </div>
 </div>
 <div class="navbar-categories">
