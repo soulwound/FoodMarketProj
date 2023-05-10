@@ -1,6 +1,14 @@
 from flask import Flask, render_template
+from flask_wtf import Form
+from wtforms.fields import StringField, SubmitField
+from wtforms.validators import InputRequired
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'so secret tsh'
+
+class PhoneForm(Form):
+    name = StringField('Введите номер телефона', validators=[InputRequired()])
+    submit = SubmitField('Отправить')
 
 
 @app.route('/')

@@ -33,6 +33,14 @@
         <img class="if-cart-is-empty" id="if-cart-is-empty-img" src="/static/images/if-cart-is-empty.png">
         <div class="empty-cart-alert" id="if-cart-is-empty-alert">Ваша корзина пуста</div>
     </div>
+    <div class="authorization-window">
+        <button class="close-button" onclick="closeAuthorizationWindow()"><img src="/static/images/close.png"></button>
+        <div class="authorization-header">Вход в кабинет</div>
+        <form method="post">
+            {{ form.name.label }} {{ form.name() }}
+            {{ form.submit() }}
+        </form>
+    </div>
 </div>
 <div class="navbar-categories">
     <div class="navbar-categories-wrapper">
