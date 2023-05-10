@@ -37,7 +37,7 @@
         <button class="close-button" onclick="closeAuthorizationWindow()"><img src="/static/images/close.png"></button>
         <div class="authorization-header">Вход в кабинет</div>
         <form method="post">
-            {{ form.name.label }} {{ form.name() }}
+            {{ form.name.label() }}{{ form.name()}}
             {{ form.submit() }}
         </form>
     </div>

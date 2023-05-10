@@ -1,19 +1,21 @@
-from flask import Flask, render_template
-from flask_wtf import Form
-from wtforms.fields import StringField, SubmitField
-from wtforms.validators import InputRequired
+from flask import Flask, render_template, request
+from wtforms import Form, validators
+from wtforms.fields import StringField, SubmitField, PasswordField, BooleanField
+from wtforms.validators import Regexp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'so secret tsh'
 
+
 class PhoneForm(Form):
-    name = StringField('Введите номер телефона', validators=[InputRequired()])
-    submit = SubmitField('Отправить')
+    name = StringField("Телефон:", validators=[Regexp('/D')])
+    submit = SubmitField("Submit")
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('base.html')
+    form = PhoneForm(request.form)
+    return render_template('base.html', form=form)
 
 
 @app.route('/sushi')
