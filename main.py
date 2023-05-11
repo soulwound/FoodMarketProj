@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 from wtforms import Form, validators
 from wtforms.fields import StringField, SubmitField, PasswordField, BooleanField
 from wtforms.validators import Regexp
@@ -15,12 +15,26 @@ class PhoneForm(Form):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = PhoneForm(request.form)
+    if 'phone-number' not in session:
+        session['phone-number'] = request.form.get('name')
+        session.modified = True
+    else:
+        session['phone-number'] = request.form.get('name')
+        session.modified = True
+        session.permanent = True
+    print(session['phone-number'])
     return render_template('base.html', form=form)
 
 
-@app.route('/sushi')
+@app.route('/sushi', methods=['GET', 'POST'])
 def sushi():
-    return render_template('sushi.html')
+    form = PhoneForm(request.form)
+    if 'phone-number' not in session:
+        session['phone-number'] = request.form.get('name')
+    else:
+        session['phone-number'] = request.form.get('name')
+    print(session['phone-number'])
+    return render_template('sushi.html', form=form)
 
 
 @app.errorhandler(404)

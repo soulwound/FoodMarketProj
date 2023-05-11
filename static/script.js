@@ -29,3 +29,15 @@ function updateCart(cart_list) {
         document.querySelector('#if-cart-is-empty-alert').style.display = 'none';
     }
 }
+
+function showAuthorizationWindow() {
+    if (document.querySelector('#authorization-window').style.display == 'none') {
+        document.querySelector('#authorization-window').style.display = 'block'
+    } else {
+        document.querySelector('#authorization-window').style.display = 'none'
+    }
+}
+
+function closeAuthorizationWindow() {
+    document.querySelector('#authorization-window').style.display = 'none';
+}

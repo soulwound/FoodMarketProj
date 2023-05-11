@@ -25,7 +25,7 @@
                 <div class="white-line"></div>
                 <img src="/static/images/cart.png">
             </button>
-        <button class="profile-button">
+        <button class="profile-button" onclick="showAuthorizationWindow()">
             <img src="/static/images/profile-icon.png">
         </button>
     </div>
@@ -33,7 +33,7 @@
         <img class="if-cart-is-empty" id="if-cart-is-empty-img" src="/static/images/if-cart-is-empty.png">
         <div class="empty-cart-alert" id="if-cart-is-empty-alert">Ваша корзина пуста</div>
     </div>
-    <div class="authorization-window">
+    <div class="authorization-window" id="authorization-window">
         <button class="close-button" onclick="closeAuthorizationWindow()"><img src="/static/images/close.png"></button>
         <div class="authorization-header">Вход в кабинет</div>
         <form method="post">
