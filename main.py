@@ -12,7 +12,7 @@ class PhoneForm(Form):
 
 
 @app.route('/setcookie')
-def setcookie():
+def set_cookie():
     context = {}
     context['text'] = 'Привет Мир!'
     name = 'penis'
@@ -26,7 +26,7 @@ def setcookie():
 
 
 @app.route('/getcookie')
-def getcookie():
+def get_cookie():
    # читаем cookie с именем 'user'
    name = request.cookies.get('phone')
    return f'<h1>Cookie user={name}</h1>'

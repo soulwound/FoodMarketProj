@@ -37,7 +37,8 @@
         <button class="close-button" onclick="closeAuthorizationWindow()"><img src="/static/images/close.png"></button>
         <div class="authorization-header">Вход в кабинет</div>
         <form method="post">
-            {{ form.name.label() }}{{ form.name()}}
+            {{ form.name.label(class='form-name-label') }} 
+            {{ form.name(class='form-phone') }}
             {{ form.submit() }}
             {{ request.cookies.get('phone') }}
         </form>
