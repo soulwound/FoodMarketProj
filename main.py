@@ -6,12 +6,13 @@ from wtforms.validators import Regexp
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'so secret tsh'
 
+
 class PhoneForm(Form):
     name = StringField("Телефон:", validators=[Regexp('/D')])
     submit = SubmitField("Submit")
 
 
-@app.route('/setcookie')
+@app.route('/set-cookie')
 def set_cookie():
     context = {}
     context['text'] = 'Привет Мир!'
@@ -25,7 +26,7 @@ def set_cookie():
     return resp
 
 
-@app.route('/getcookie')
+@app.route('/get-cookie')
 def get_cookie():
    # читаем cookie с именем 'user'
    name = request.cookies.get('phone')
@@ -60,5 +61,5 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    app.run(host='0.0.0.0')
+    app.run(debug=True)
+    # app.run(host='0.0.0.0')

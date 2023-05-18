@@ -35,13 +35,21 @@
     </div>
     <div class="authorization-window" id="authorization-window">
         <button class="close-button" onclick="closeAuthorizationWindow()"><img src="/static/images/close.png"></button>
-        <div class="authorization-header">Вход в кабинет</div>
-        <form method="post">
-            {{ form.name.label(class='form-name-label') }} 
-            {{ form.name(class='form-phone') }}
-            {{ form.submit() }}
-            {{ request.cookies.get('phone') }}
-        </form>
+        {% if(request.cookies.get('phone')==None) %}
+            <div class="authorization-header">Вход в кабинет</div>
+            <form method="post">
+                {{ form.name.label(class='form-name-label') }} 
+                {{ form.name(class='form-phone') }}
+                {{ form.submit() }}
+                {{ request.cookies.get('phone') }}
+            </form>
+        {% else %}
+            <div class="authorization-greatings">
+                Вы авторизованы под номером<br>
+                {{ request.cookies.get('phone') }}
+            </div>
+            <button class="authorization-quit">Выйти</button>
+        {% endif %}
     </div>
 </div>
 <div class="navbar-categories">

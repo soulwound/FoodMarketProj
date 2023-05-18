@@ -185,8 +185,35 @@ body {
     padding-bottom: 24px;
 }
 
+.authorization-window .authorization-greatings {
+    font-family: 'TT Interfaces';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #1B1B1B;
+    padding-bottom: 24px;
+}
+
 .form-name-label {
     display: none;
+}
+
+.authorization-window .authorization-quit {
+    margin-left: 40px;
+    width: 280px;
+    height: 48px;
+    background-color: #E07153;
+    border: 1px solid #C95C3F;
+    border-radius: 2px;
+    font-family: TT Interfaces;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    background-image: url('images/quit-button-bg.png');
 }
 
 .authorization-window input {
