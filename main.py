@@ -46,11 +46,11 @@ def index():
 @app.route('/sushi', methods=['GET', 'POST'])
 def sushi():
     form = PhoneForm(request.form)
-    if 'phone-number' not in session:
-        session['phone-number'] = request.form.get('name')
-    else:
-        session['phone-number'] = request.form.get('name')
-    return render_template('sushi.html', form=form)
+    resp = make_response(render_template('sushi.html', form=form))
+    if request.form.get('name') is not None:
+        phone = request.form.get('name')
+        resp.set_cookie('phone', phone)
+    return resp
 
 
 @app.errorhandler(404)
