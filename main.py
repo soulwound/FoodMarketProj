@@ -1,15 +1,43 @@
+import os
 from flask import Flask, render_template, request, session, g, make_response
 from wtforms import Form, validators
 from wtforms.fields import StringField, SubmitField, PasswordField, BooleanField
 from wtforms.validators import Regexp
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'so secret tsh'
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(basedir, "data.sqlite")}'
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+
+db = SQLAlchemy(app)
 
 
 class PhoneForm(Form):
     name = StringField("Телефон:", validators=[Regexp('/D')])
     submit = SubmitField("Submit")
+
+
+class Category(db.Model):
+    __tablename__ = 'categories'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(32), unique=True)
+    product = db.relationship('Product', backref='category')
+
+    def __repr__(self):
+        return '<Categoty %r>' % self.name
+
+
+class Product(db.Model):
+    __tablename__ = 'products'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(32), unique=True)
+    price = db.Column(db.Numeric)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'))
+
+    def __repr__(self):
+        return '<Product %r>' % self.title
 
 
 @app.route('/set-cookie')
