@@ -19,22 +19,29 @@ class PhoneForm(Form):
     submit = SubmitField("Submit")
 
 
-class Category(db.Model):
+class Category(db.Model):  # таблица категорий
     __tablename__ = 'categories'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(32), unique=True)
+    title = db.Column(db.String(32), unique=True)
     product = db.relationship('Product', backref='category')
 
     def __repr__(self):
         return '<Categoty %r>' % self.name
 
 
-class Product(db.Model):
+class Product(db.Model):  # таблицы для продуктов
     __tablename__ = 'products'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(32), unique=True)
     price = db.Column(db.Numeric)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'))
+    sale_price = db.Column(db.Numeric)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'))  #  вторичный ключ, ссылающийся на таблицу категорий
+    calories = db.Column(db.Integer)
+    proteins = db.Column(db.Numeric)
+    fats = db.Column(db.Numeric)
+    carbohydrates = db.Column(db.Numeric)
+    weight = db.Column(db.Integer)
+    ingredients = db.Column(db.String(128))
 
     def __repr__(self):
         return '<Product %r>' % self.title
