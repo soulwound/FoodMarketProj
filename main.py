@@ -51,7 +51,7 @@ class Product(db.Model):  # таблицы для продуктов
 def set_cookie():
     context = {}
     context['text'] = 'Привет Мир!'
-    name = 'penis'
+    name = 'nsjgjdskg'
     # получаем объект ответа
     resp = make_response(render_template('basic.html', content=context))
     # устанавливаем cookie 'user' со
@@ -82,6 +82,15 @@ def index():
 def sushi():
     form = PhoneForm(request.form)
     resp = make_response(render_template('sushi.html', form=form))
+    if request.form.get('name') is not None:
+        phone = request.form.get('name')
+        resp.set_cookie('phone', phone)
+    return resp
+
+@app.route('/pizza', methods=['GET', 'POST'])
+def pizza():
+    form = PhoneForm(request.form)
+    resp = make_response(render_template('pizza.html', form=form))
     if request.form.get('name') is not None:
         phone = request.form.get('name')
         resp.set_cookie('phone', phone)
